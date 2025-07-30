@@ -1,60 +1,38 @@
- Wine Quality Prediction Project
+# 🍷 Wine Quality Prediction (Classification Model)
 
-## Project Overview
-This is a comprehensive machine learning project designed to classify red wine quality using physicochemical properties. The objective is to predict wine quality levels categorized as Low, Medium, and High based on features like alcohol, acidity, sulphates, and more. The final model, built using a RandomForestClassifier, achieved a validation accuracy of **86.88%**. The pipeline includes data preprocessing, feature engineering, model training, evaluation, and saving the model for deployment.
+This project predicts wine quality using advanced feature engineering and classification models. It groups wine quality into three classes — Low, Medium, and High — and uses Random Forest as the final production model.
 
-## Key Achievements
-- **86.88% Accuracy**: Achieved using RandomForestClassifier with engineered features
-- **Feature Engineering**: Custom features such as alcohol_sulphates and acid_ratio improved performance
-- **Production Ready**: Trained model and reusable prediction script are saved
-- **Clean Pipeline**: Fully modular and maintainable ML architecture
+---
 
-## Project Structure
-wine_prediction/
-├── config/
-│ └── config.yaml # Configuration settings
-├── data/
-│ └── wine_quality.csv # Raw dataset
-├── models/ # Trained model files
-│ ├── production_wine_model.joblib
-│ ├── feature_names.joblib
-│ └── wine_predictor.py
-├── outputs/ # Visualizations and evaluation reports
-├── src/
-│ ├── data_loader.py # Data loading functions
-│ ├── preprocessing.py # Preprocessing & feature engineering
-│ ├── production_model.py # Model training and saving
-│ ├── evaluation.py # Accuracy and confusion matrix
-│ ├── visualization.py # Feature importance plots
-├── main.py # Entry point to run the full pipeline
-├── requirements.txt # Project dependencies
-└── README.md # This file
+## 🚀 Getting Started
 
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/vinayak-7569/wine_prediction.git
+cd wine_prediction
+2. Create and Activate a Virtual Environment
 bash
 Copy
 Edit
-
-## Quick Start
-
-### 1. Setup Environment
-```bash
-# Clone the repository
-git clone https://github.com/vinayak-7569/wine_prediction.git
-cd wine_prediction
-
-# Create virtual environment
+# Windows
 python -m venv venv
-venv\Scripts\activate  # On Windows
-# source venv/bin/activate  # On Linux/Mac
+venv\Scripts\activate
 
-# Install required packages
+# Linux / Mac
+python3 -m venv venv
+source venv/bin/activate
+3. Install Dependencies
+bash
+Copy
+Edit
 pip install -r requirements.txt
-2. Run the Main Pipeline
+4. Run the Main Pipeline
 bash
 Copy
 Edit
 python main.py
-3. Expected Output
+✅ Expected Output
 yaml
 Copy
 Edit
@@ -62,12 +40,12 @@ Starting Wine Quality Prediction Pipeline...
 Accuracy: 0.8688 (86.88%)
 Model saved: models/production_wine_model.joblib
 Predictor code saved: models/wine_predictor.py
-Model Performance
+📊 Model Performance
 Model	Accuracy	Notes
-Random Forest	86.88%	Final selected model (3 classes)
-Baseline Model	~70.0%	Before feature engineering
+Random Forest	86.88%	Final selected model
+Baseline Model	~70.00%	Before feature engineering
 
-Key Features
+🧠 Key Features
 🔧 Feature Engineering
 alcohol_sulphates: Interaction of alcohol and sulphates
 
@@ -76,25 +54,23 @@ acid_ratio: Balance of fixed and volatile acidity
 alcohol_quality_proxy: Alcohol scaled with quality indicator
 
 🎯 Classification Approach
-Target variable grouped into three classes:
-
 Low Quality: 3–4
 
 Medium Quality: 5–6
 
 High Quality: 7–8
 
-Addressed imbalance using class weights
+→ Imbalance addressed using class_weight='balanced'
 
-🚀 Production Artifacts
-Trained model (production_wine_model.joblib)
+📦 Production Artifacts
+models/production_wine_model.joblib → Final trained model
 
-Feature list (feature_names.joblib)
+models/wine_predictor.py → Inference-ready predictor
 
-Inference script (wine_predictor.py)
+models/feature_names.joblib → Features used for training
 
-Technical Stack
-Python 3.13.1
+⚙️ Technical Stack
+Python 3.10 / 3.13+
 
 pandas 2.2.3
 
@@ -104,21 +80,36 @@ scikit-learn 1.5.2
 
 joblib 1.4.2
 
-matplotlib / seaborn for visualization
+seaborn, matplotlib (for EDA/visualization)
 
-Future Enhancements
-SHAP-based model interpretability
+🌱 Future Enhancements
+✅ SHAP-based model explainability
 
-Hyperparameter tuning (e.g., GridSearchCV)
+✅ Hyperparameter tuning (GridSearchCV)
 
-Add XGBoost and CatBoost comparisons
+✅ Add XGBoost and CatBoost comparisons
 
-Streamlit or Flask app for deployment
+✅ Deploy via Streamlit or Flask web app
 
-License
+📝 License
 This project is licensed under the MIT License.
 
-Contact
+👤 Contact
 GitHub: @vinayak-7569
 
-Project Link: Wine Quality Prediction
+Project Repo: Wine Quality Prediction
+
+yaml
+Copy
+Edit
+
+---
+
+### 📌 Instructions:
+
+1. Copy the content above into a `README.md` file inside your repo.
+2. Commit and push:
+   ```bash
+   git add README.md
+   git commit -m "Add polished README"
+   git push origin main

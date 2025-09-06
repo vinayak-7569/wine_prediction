@@ -1,8 +1,8 @@
 ﻿venv310/
-*.dll
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
 .env
 .DS_Store
+*.dll

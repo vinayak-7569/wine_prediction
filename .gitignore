@@ -1,18 +1,8 @@
 ﻿venv310/
+*.dll
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
 .env
 .DS_Store
-*.dll
-
-# Remove venv and DLLs from Git tracking without deleting them locally
-git rm -r --cached venv310
-git rm --cached *.dll
-
-# Commit the changes
-git commit -m "Remove virtual environment and DLLs from Git tracking"
-
-# Push to GitHub
-git push origin master --force

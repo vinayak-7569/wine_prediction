@@ -1,0 +1,3 @@
+﻿data_path: data/raw/wine_data.csv
+target_column: quality
+is_classification: true

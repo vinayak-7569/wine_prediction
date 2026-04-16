@@ -6,3 +6,6 @@ __pycache__/
 .env
 .DS_Store
 *.dll
+catboost_info/
+models/
+data/
